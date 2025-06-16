@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Buddy Drop</title>
+    <link rel="stylesheet" href="buddy signup.css" />
+ 
+</head>
+<body>
+   <div class="header">
+     <h2>Sign up</h2>
+   </div>
+   
+  <div class="signup-container">
+   
+    
+    <form>
+        <name class="name">First Name <span>*</span></name>
+     <input type="text" name="text" required>
+     <br><br>
+        <name class="name">Last Name <span>*</span></name>
+     <input type="text" name="text" required>
+     <br><br>
+        <name class="name">Email <span>*</span></name>
+     <input type="email" name="email" required>
+     <br><br>
+        <name class="name">Password <span>*</span></name>
+        <div class="password">
+            <input type="password" id="password" name="password" placeholder="destiny" required>
+             <img id="icon" src="eye-icon.png" width="20px" onclick="togglePassword('password', 'icon')">
+        </div>
+     <br><br>
+        <name class="name">Confirm Password <span>*</span></name>
+        <div class="password">
+            <input type="password" id="confirm-password" name="password" placeholder="destiny" required>
+            <img id="icon2" src="eyee-icon.png" width="20px" onclick="togglePassword('confirm-password', 'icon2')">
+        </div>
+    
+    </form>
+
+    <a  href="buddy login.html" class="white"><button class="submit">Sign up</button></a>
+
+    <hr>
+    <p class="Or">Or Sign up with</p>
+
+    <div class="logos">
+      <img class="logo" src="apple.png" width="15px" height="15px">
+      <img class="logo google" src="google.png" width="15px">
+      <img class="logo twitter" src="X-Logo.png" width="18px" height="15px">
+    </div>
+    <br><br>
+    <div class="last">
+       <pp>Already have an account? <a href="buddy login.html">Log in</a></pp> 
+    </div>
+    
+    
+
+  </div>
+</body>
+<script src="buddy signup.js"></script>
+</html>

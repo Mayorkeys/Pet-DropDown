@@ -1,0 +1,138 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(223, 221, 221);
+    font-family: Arial, Helvetica, sans-serif;
+      /*color: rgb(29, 160, 110);*/
+}
+
+.signup-container{
+    max-width: 400px;
+    margin: 20px auto;
+}
+.pass{
+    position: relative;
+}
+.arrow{
+    position: absolute;
+    top: 2px;
+    left: 22px
+}
+.arrow:hover{
+    transition: 1s;
+    background-color: rgb(29, 160, 110);
+    color: white;
+    border-radius: 8px;
+    padding: 3px;
+}
+h2{
+    text-align: center;
+    padding: 5px;
+    color: rgb(29, 160, 110);
+}
+form{
+    margin: 5px;
+
+}
+.name{
+    padding: 0px 15px;
+    font-weight: 0;
+   
+}
+
+input{
+    width: 330px;
+    padding: 10px;
+    border-radius: 5px;
+    margin-left: 18px;
+    border: none;
+    font-size: 15px;
+    outline: none;
+}
+
+span{
+    color: red;
+}
+
+p{
+    margin: 6px;
+    padding: 0 10px;
+}
+.submit{
+    display: flex;
+    justify-self: center;
+    justify-content: center;
+    width: 320px;
+    background-color: rgb(29, 160, 110);
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    
+}
+.submit.text{
+    font-weight: bold;
+    
+}
+button{
+    font-size: 20px;
+    
+}
+.log{
+    width: 250px;
+    font-size: 15px;
+    
+}
+.create{
+    margin-left: 2.9rem;
+    margin-top: -2rem;   
+    text-decoration: none;
+}
+.return{
+    margin-left: 14rem;
+    width: 150px;
+    margin-top: -1.1rem;
+   
+}
+a{
+     text-decoration: none;
+     color: rgb(29, 160, 110) ;
+}
+
+
+@media (max-width: 350px) {
+   body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(223, 221, 221);
+    font-family: Arial, Helvetica, sans-serif;
+}
+.inbox-container{
+    max-width: 320px;
+    margin: 10px auto;
+}
+input{
+    width: 300px;
+    padding: 10px;
+    border-radius: 5px;
+    margin-left: 20px;
+    border: none;  
+    font-size: 10px;
+    outline: none;
+}
+.name{
+    padding: 0px 18px;
+    font-weight: 6;
+    font-size: 15px;
+    margin: 9px;
+   
+}
+p{
+    margin: 9px;
+    padding: 0 15px;
+}
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buddy Login</title>
+    <link rel="stylesheet" href="buddy login.css" />
+</head>
+<body>
+   <div class="header">
+          <h2>log in</h2>
+       </div>
+      
+    <div class="signup-container">
+      
+      <form>
+        <name class="name">Email <span>*</span></name>
+       <input type="email" name="email">
+       <br><br>
+        <name class="name">Password <span>*</span></name> 
+          <div class="password">
+            <input type="password" id="password" name="password" placeholder="destiny" required>
+             <img id="icon" src="eye-icon.png" width="20px" onclick="togglePassword('password', 'icon')">
+        </div>
+        <div class="forget"><a href="buddy forget.html">Forgot Password?</a></div>
+     <br>
+        <name class="name">Confirm Password <span>*</span></name>
+        <div class="password">
+            <input type="password" id="confirm-password" name="password" placeholder="destiny" required>
+            <img id="icon2" src="eyee-icon.png" width="20px" onclick="togglePassword('confirm-password', 'icon2')">
+        </div>
+    
+      </form>
+
+      <button type="submit" value="submit" class="submit"> <text>Log in</text></button>
+
+      <hr>
+      <p class="Or">Or Log in with</p>
+
+      <div class="logos">
+      <img class="logo" src="apple.png" width="20px" height="20px">
+      <img class="logo google" src="google.png" width="20px">
+      <img class="logo twitter" src="X-Logo.png" width="20px" height="20px">
+      </div>
+      <br><br>
+      <div class="last">
+        <pp>Don't have an account?</pp> <a href="buddy signup.html">Sign up</a>
+      </div>
+      
+      <div class="peet">
+         <img class="pet" src="pet.png" width="150px" />
+      </div>
+
+    </div>
+</body>
+<script src="buddy login.js"></script>
+</html>
