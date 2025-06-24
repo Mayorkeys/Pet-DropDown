@@ -37,7 +37,7 @@ form{
 }
 .name{
     padding: 0px 15px;
-    font-weight: 0;
+    
    
 }
 
@@ -126,7 +126,6 @@ input{
 }
 .name{
     padding: 0px 18px;
-    font-weight: 6;
     font-size: 15px;
     margin: 9px;
    

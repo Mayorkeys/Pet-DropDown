@@ -26,9 +26,7 @@ form{
 
 }
 .name{
-    padding: 0px 15px;
-    font-weight: 10;
-   
+    padding: 0px 15px;   
 }
 
 input{
@@ -131,7 +129,7 @@ a:hover{
 
 @media (max-width: 380px){
   .signup-container{
-    max-width: 320px;
+    max-width: 370px;
     margin: 10px 0;
 }  
 input{
@@ -192,7 +190,7 @@ form{
 }
 }
 
-/*media for lower phones*/
+/*media for lower phones
 @media (max-width: 350px) {
    body{
     margin: 0;
