@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment Status</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="css/payment-status.css" />
+  </head>
+  <body>
+    <div class="payment_status_container">
+      <!-- payment received status -->
+      <div class="payment_status_details_container">
+        <img
+          src="images/payment-success-icon.png"
+          alt="payment-success-icon"
+          class="payment_status_img"
+        />
+        <h3 class="payment_status_heading">Payment received!</h3>
+        <p class="payment_status_txt">
+          We've received your <span id="statusAmount">50,500</span> payment,
+          <span id="paymentSender">Destiny.</span>
+        </p>
+      </div>
+      <br />
+      <hr />
+      <!-- payment received details -->
+      <div class="payment_details_container">
+        <h3 class="payment_details_heading">PAYMENT DETAILS</h3>
+        <div class="payment_details_info_container">
+          <div class="payment_details_info">
+            <p>Payment Amount</p>
+            <p id="statusAmount"><strong>&#8358;50,500</strong></p>
+          </div>
+          <div class="payment_details_info">
+            <p>Payment Date</p>
+            <p id="statusDate"><strong>Nov 13, 2025</strong></p>
+          </div>
+          <div class="payment_details_info">
+            <p>Payment Method</p>
+            <p id="creditCardNumber"><strong>Credit card *1121</strong></p>
+          </div>
+          <div class="payment_details_info">
+            <p>Confirmation</p>
+            <p id="confirmationToken"><strong>1RJSJK-7V</strong></p>
+          </div>
+        </div>
+
+        <br />
+        <hr />
+        <!-- payment balance details -->
+        <div class="payment_balance_container">
+          <div class="payment_amount_info">
+            <p>PAID</p>
+            <p id="paidAmount"><strong>&#8358; 50,500</strong></p>
+        </div>
+        <div class="balance_amount_info">
+            <p>BALANCE</p>
+            <p id="balanceAmount"><strong>&#8358; 0.00</strong></p>
+          </div>
+        </div>
+
+        <!-- payment status button -->
+        <div class="payment_status_btn_container">
+          <button class="payment_status_btn">Done</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

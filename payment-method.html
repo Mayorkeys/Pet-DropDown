@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment Info</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="css/payment-method.css" />
+  </head>
+  <body>
+    <div class="screen" id="payment-screen">
+      <h3 class="payment-screen_heading">Payment Method</h3>
+      <div class="payment_details">
+        <div class="payment_details_img_container">
+          <img
+            src="images/card-payment-icon.png"
+            class="payment-screen_img"
+            alt="payment-method"
+          />
+        </div>
+        <div class="payment_details_heading">
+          <p>Enter your card details to pay</p>
+          <div class="payment_details_email">
+            <p id="userEmail" class="payment_details_email_details">
+              Destiny@gmail.com
+            </p>
+            <p class="payment_amount">
+              Pay: &nbsp; ₦
+              <span id="payment_amount"> 50000</span>
+            </p>
+          </div>
+        </div>
+
+        <form class="form_container" id="paymentForm">
+          <div class="form-group">
+            <label for="cardNumber">Card Number</label>
+            <input
+              type="text"
+              id="cardNumber"
+              name="cardNumber"
+              inputmode="numeric"
+              pattern="[0-9]{13,19}"
+              maxlength="19"
+              value=""
+              placeholder="1234 5678 9012 3456"
+              required
+            />
+          </div>
+
+          <div class="form_group_secondary_container">
+            <div class="form-group">
+              <label for="expDate">Exp Month</label>
+              <input
+                type="text"
+                id="expDate"
+                name="expDate"
+                placeholder="MM/YY"
+                maxlength="5"
+                value=""
+                pattern="(0[1-9]|1[0-2])\/\d{2}"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="cvc">CVC</label>
+              <input
+                type="text"
+                id="cvc"
+                name="cvc"
+                value=""
+                placeholder="123"
+                maxlength="4"
+                pattern="\d{3,4}"
+                inputmode="numeric"
+                required
+              />
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <!-- payment buttons -->
+      <div class="payment_buttons_container">
+        <button id="payButton" class="pay-button">Pay Now</button>
+        <button id="cancelButton" class="payment_cancel_button">
+          X Cancel Payment
+        </button>
+      </div>
+
+      <div class="paystack_img_container">
+        <img src="images/paystack-icon.png" alt="paystack-icon" />
+      </div>
+    </div>
+    <script src="https://js.paystack.co/v2/inline.js"></script>
+    <script src="js/payment-method.js"></script>
+  </body>
+</html>
