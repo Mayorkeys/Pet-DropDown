@@ -1,11 +1,12 @@
-const submitButton = document.getElementById("submit-btn");
+const loginButton = document.getElementById("login_btn");
+const loginForm = document.getElementById("loginForm");
 const error = document.getElementById("error");
 const success = document.getElementById("success");
-login.addEventListener("submit", function (e) {
+loginForm.addEventListener("submit", function (e) {
   const email = document.getElementById("email").value.trim();
-  const password = document.getElementById("passWord").value.trim();
+  const password = document.getElementById("password").value.trim();
   const url = "https://my-buddydrop.onrender.com/api/users";
-
+  let loading = false;
   e.preventDefault();
   error.textContent = "";
   success.textContent = "";
@@ -19,7 +20,7 @@ login.addEventListener("submit", function (e) {
 
   // Confirm password
   if (password.length < 6) {
-    error.textContent = "Password must be at least 6 characters.";
+    error.textContent = "Enter a valid password.";
     return;
   }
 
@@ -27,34 +28,42 @@ login.addEventListener("submit", function (e) {
     email,
     password,
   };
+  loginButton.textContent = "Loading...";
 
-  fetch(`${url}/register`, {
+  fetch(`${url}/login`, {
     method: "POST",
     headers: {
-      "Content-Type": "application/json", 
+      "Content-Type": "application/json",
     },
     body: JSON.stringify(data),
   })
     .then((response) => {
+      return response; // return the response so the next .then() can use it
+    })
+    .then((response) => {
+      loginButton.textContent = "Login";
       if (!response.ok) {
-        error.textContent = response.message;
-        throw new Error(response.message);
+        return response.json().then((err) => {
+          throw new Error(err.message || "Login failed");
+        });
       }
-      return response.json(); // Parse response body as JSON
+      return response.json();
     })
     .then((data) => {
       success.textContent = data.message;
-      window.location.href = "buddy login.html";
+      window.location.href = "schedule.html";
       console.log("Success:", data);
     })
     .catch((error) => {
+      loginButton.textContent = "Login";
+      error.textContent = error.message;
       console.error("Error:", error);
     });
 });
 function togglePassword() {
   // Get the input field and eye icon
-  const input = document.getElementById("passWord");
-  const eye = document.getElementById("eyeId");
+  const input = document.getElementById("password");
+  const eye = document.getElementById("icon");
 
   // Check if the input is currently a password type
   if (input.type === "password") {

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buddy Login</title>
+    <link rel="stylesheet" href="css/login.css" />
+  </head>
+  <body>
+    <div class="header">
+      <h2>log in</h2>
+    </div>
+
+    <div class="signup-container">
+      <p id="error" style="color: red"></p>
+      <p id="success" style="color: green"></p>
+
+      <form id="loginForm">
+        <name class="name">Email <span>*</span></name>
+        <input type="email" name="email" id="email" />
+        <br /><br />
+        <name class="name">Password <span>*</span></name>
+        <div class="password">
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="destiny"
+          />
+          <img
+            id="icon"
+            src="/images/eye-icon.png"
+            width="20px"
+            onclick="togglePassword()"
+          />
+        </div>
+        <div class="forget">
+          <a href="buddy forget.html">Forgot Password?</a>
+        </div>
+
+        <button type="submit" id="login_btn" value="submit" class="submit">
+          Log in
+        </button>
+      </form>
+
+      <hr />
+      <p class="Or">Or Log in with</p>
+
+      <div class="logos">
+        <img class="logo" src="/images/apple.png" width="20px" height="20px" />
+        <img class="logo google" src="/images/google.png" width="20px" />
+        <img
+          class="logo twitter"
+          src="/images/X-Logo.png"
+          width="20px"
+          height="20px"
+        />
+      </div>
+      <br /><br />
+      <div class="last">
+        <pp>Don't have an account?</pp> <a href="index.html">Sign up</a>
+      </div>
+
+      <div class="peet">
+        <img class="pet" src="/images/pet.png" width="150px" />
+      </div>
+    </div>
+  </body>
+  <script src="js/login.js"></script>
+</html>

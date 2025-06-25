@@ -8,8 +8,8 @@ signupForm.addEventListener("submit", function (e) {
   const email = document.getElementById("email").value.trim();
   const password = document.getElementById("passWord").value.trim();
   const phoneNumber = document.getElementById("phoneNumber").value.trim();
-  const url = "https://my-buddydrop.onrender.com/api/users";
-
+ const url = "https://my-buddydrop.onrender.com/api/users";
+  let loading = false;
   e.preventDefault();
   error.textContent = "";
   success.textContent = "";
@@ -51,6 +51,7 @@ signupForm.addEventListener("submit", function (e) {
     phone: phoneNumber,
     password,
   };
+  submitButton.textContent = "Loading...";
   fetch(`${url}/register`, {
     method: "POST",
     headers: {
@@ -67,10 +68,11 @@ signupForm.addEventListener("submit", function (e) {
     })
     .then((data) => {
       success.textContent = data.message;
-      window.location.href = "buddy login.html";
+      window.location.href = "login.html";
       console.log("Success:", data);
     })
     .catch((error) => {
+        submitButton.textContent = "Signup";
       console.error("Error:", error);
     });
 });
