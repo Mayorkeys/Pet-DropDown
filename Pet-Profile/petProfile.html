@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Pet profile </title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="top-bar">
+      <h2>Edit Pet’s Profile</h2>
+    </div>
+
+    <div class="profile-pic">
+      <img src="/img/profile-pic.jpeg" alt="Pet Image">
+    </div>
+
+    <form id="petForm">
+      <h3>Basic Info</h3>
+
+      <label for="pet" >Pet Name</label>
+      <input type="text" value="Micasa">
+
+      <label>Species</label>
+      <select id="pet" name="pet">
+        <option value=""> Select Specie</option>
+        <option value="dog">Dog</option>
+        <option value="cat">Cat</option>
+        <option value="bird">Bird</option>
+      </select>
+
+      <label>Breed</label>
+      <select id="breed" name="breed">
+        <option value=""> Select Breed </option>
+      </select>
+
+      <label>Gender</label>
+      <select>
+        <option>Male</option>
+        <option>Female</option>
+      </select>
+
+      <label>Weight/Height</label>
+      <select>
+        <option>4kg / 2m</option>
+      </select>
+
+      <label>Age</label>
+      <input type="text" value="1y 2m">
+      
+      <h3>Medical Details</h3>
+
+      <div class="medical">
+        <div class="switch-group">
+          <label>Vaccinated</label>
+          <label class="switch">
+            <input type="checkbox">
+            <span class="slider round"></span>
+          </label>
+        </div>
+        <div>
+          <label>Allergies</label>
+          <p>None</p>
+        </div>
+      </div>
+
+      <button type="submit">Save changes</button>
+    </form>
+  </div>
+
+<script src="script.js"></script>
+</body>
+</html>
